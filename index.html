@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- 
+      META TAGS : informations sur la page pour le navigateur
+      - charset : encodage des caractères (UTF-8 supporte les accents français)
+      - viewport : rend la page responsive (s'adapte aux écrans mobiles)
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+      FAVICON : la petite icône dans l'onglet du navigateur
+      On utilise un emoji cœur comme favicon via un SVG inline
+    -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤍</text></svg>"
+    />
+
+    <!-- 
+      GOOGLE FONTS : on charge deux polices élégantes
+      - Cormorant Garamond : police serif élégante pour les titres et textes poétiques
+      - Inter : police sans-serif moderne pour les éléments d'interface
+      
+      POURQUOI ces polices ? 
+      Cormorant Garamond évoque la littérature classique, la poésie, la profondeur.
+      C'est parfait pour notre ton émotionnel.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Titre de la page (visible dans l'onglet du navigateur) -->
+    <title>Pour toi...</title>
+  </head>
+  <body>
+    <!-- 
+      C'est ici que React va injecter toute l'application.
+      Le div avec id="root" est le point d'ancrage de React.
+      Tu ne mets RIEN d'autre dans le body.
+    -->
+    <div id="root"></div>
+
+    <!-- Vite injecte automatiquement le script JavaScript ici -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

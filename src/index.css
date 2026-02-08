@@ -1,0 +1,94 @@
+/**
+ * ============================================
+ * 📄 index.css — Styles globaux OPTIMISÉS MOBILE
+ * ============================================
+ * 
+ * AJOUTS POUR MOBILE :
+ *   - Empêche le zoom accidentel au double-tap
+ *   - Empêche le bounce scroll sur iOS
+ *   - Empêche la sélection de texte involontaire
+ *   - Taille de police minimum pour la lisibilité
+ */
+
+/* ===== RESET CSS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== HTML — Empêche le zoom sur iOS ===== */
+html {
+  /* Empêche le bounce scroll sur iOS (effet élastique en haut/bas) */
+  overflow: hidden;
+  height: 100%;
+  /* Empêche le zoom au double-tap sur iOS */
+  touch-action: manipulation;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  background-color: #0a0e27;
+  color: #f0f4ff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* ===== OPTIMISATIONS MOBILE ===== */
+
+  /* Empêche la sélection de texte au long-press sur mobile */
+  -webkit-user-select: none;
+  user-select: none;
+
+  /* Empêche le menu contextuel au long-press */
+  -webkit-touch-callout: none;
+
+  /* Empêche le highlight bleu au tap sur Android */
+  -webkit-tap-highlight-color: transparent;
+
+  /* Taille de police minimum — empêche iOS de zoomer 
+     automatiquement sur les inputs < 16px */
+  font-size: 16px;
+}
+
+/* ===== ROOT ===== */
+#root {
+  min-height: 100vh;
+  min-height: 100dvh; /* dvh = dynamic viewport height, 
+                          gère mieux la barre d'adresse mobile */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 4px; /* Plus fin sur mobile */
+}
+::-webkit-scrollbar-track {
+  background: #0a0e27;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 2px;
+}
+
+/* ===== SÉLECTION ===== */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #f0f4ff;
+}
+
+/* ===== RESPONSIVE — Petits écrans ===== */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+/* ===== EMPÊCHE LE PULL-TO-REFRESH sur mobile ===== */
+body {
+  overscroll-behavior-y: contain;
+}

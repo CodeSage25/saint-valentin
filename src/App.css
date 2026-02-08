@@ -1,0 +1,15 @@
+/**
+ * ============================================
+ * 📄 App.css — Styles du composant App
+ * ============================================
+ * 
+ * Pour l'instant, ce fichier est minimaliste.
+ * Il va grandir au fur et à mesure qu'on ajoute des chapitres.
+ */
+
+/* Conteneur principal de l'application */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}

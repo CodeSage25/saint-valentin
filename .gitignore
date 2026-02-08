@@ -1,0 +1,16 @@
+# Dépendances (installées par npm install)
+node_modules/
+
+# Fichiers de build
+dist/
+
+# Fichiers d'environnement
+.env
+.env.local
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
